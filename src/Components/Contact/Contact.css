@@ -1,0 +1,77 @@
+.contact-form {
+  width: 100%;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-bottom: 0;
+}
+input {
+  z-index: 2;
+}
+
+input::placeholder {
+  font-size: 20px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+textarea::placeholder{
+  font-size: 20px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+textarea{
+  min-height: calc(1.5em + .75rem + 2px);
+}
+@media screen and (min-width: 992px) {
+  .contact-form {
+    width: 50%;
+  }
+}
+
+.portfolio h2{
+  font-size: 48px;
+}
+
+.portfolio i{
+  font-size: 30px;
+  
+}
+
+.dividerPort{
+  margin: auto;
+  margin-block: 10px !important;
+  position: relative;
+  text-align: center;
+  width: 40px;
+}
+.dividerPort::before,
+.dividerPort::after{
+  background-color: #2c3e50;;
+  content: "";
+  height: 4px;
+  position: absolute;
+  top: 15px;
+  width: 120px;
+}
+.dividerPort::before{
+  left: 50px;
+}
+.dividerPort::after{
+  right: 50px;
+
+}
+input[type=submit] {
+  background-color: #1abc9c;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  padding: 20px 30px;
+  border: 0;
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+input[type=submit]:hover {
+  background-color: #17957b;
+}

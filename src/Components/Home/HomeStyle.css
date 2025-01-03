@@ -1,0 +1,9 @@
+.home {
+  background-color: var(--main-color);
+}
+.img-avater {
+  width: 250px;
+}
+h1{
+  font-size: 64px;
+}
