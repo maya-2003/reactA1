@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./NavbarStyle.css";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [closeNav, setCloseNav] = useState(false);
@@ -7,11 +8,12 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container">
-        <button
-          className="navbar-brand text-uppercase fw-bolder fs-3 text-white btn btn-link"
-        >
-          Start React
-        </button>
+        <NavLink to="/">
+          <span className="navbar-brand text-uppercase fw-bolder fs-3 text-white">
+            Start React
+          </span>
+        </NavLink>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -34,21 +36,29 @@ export default function Navbar() {
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item me-3">
-              <button className="nav-link text-uppercase fw-bold p-3 my-4 rounded-3 btn btn-link portfolio">
-                Portfolio
-              </button>
-            </li>
-            <li className="nav-item me-3">
-              <button className="nav-link text-uppercase fw-bold p-3 my-4 rounded-3 btn btn-link">
-                About
-              </button>
-            </li>
-            <li className="nav-item me-3">
-              <button className="nav-link text-uppercase fw-bold p-3 my-4 rounded-3 btn btn-link">
-                Contact
-              </button>
-            </li>
+            <NavLink to="/portfolio" activeClassName="active">
+              <li className="nav-item me-3">
+                <span className="nav-link text-uppercase fw-bold p-3 my-4 rounded-3">
+                  Portfolio
+                </span>
+              </li>
+            </NavLink>
+
+            <NavLink to="/about" activeClassName="active">
+              <li className="nav-item me-3">
+                <span className="nav-link text-uppercase fw-bold p-3 my-4 rounded-3">
+                  About
+                </span>
+              </li>
+            </NavLink>
+
+            <NavLink to="/contact" activeClassName="active">
+              <li className="nav-item me-3">
+                <span className="nav-link text-uppercase fw-bold p-3 my-4 rounded-3">
+                  Contact
+                </span>
+              </li>
+            </NavLink>
           </ul>
         </div>
       </div>
